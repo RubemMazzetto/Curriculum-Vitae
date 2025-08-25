@@ -1,0 +1,211 @@
+/* Rubem Mazzetto CV - Cosmic Serenity Theme */
+
+/* Color Palette:
+   - Primary: Dark Navy Blue (#1A2634)
+   - Secondary: Soft White (#E6E6FA)
+   - Highlight: Nebula Pink (#FF4B91)
+   - Lighter Highlight (Hover): rgb(255, 104, 150)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans&display=swap');
+
+/* General Styles */
+body {
+    background-color: #1A2634;
+    color: #E6E6FA;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.page-wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: 80px auto 20px;
+}
+
+/* Navigation */
+nav {
+    background-color: #1A2634;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #FF4B91;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 1em;
+}
+
+nav li {
+    margin: 0 1em;
+}
+
+nav a {
+    color: #FF4B91;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav a:hover {
+    color: rgb(255, 104, 150);
+}
+
+/* Presentation */
+#presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#presentation h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+#presentation .photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+#presentation .summary, #presentation .contact {
+    margin-bottom: 1em;
+}
+
+/* Education */
+#education, #certifications, #experience, #skills {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#education h2, #certifications h2, #experience h2, #skills h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+.education-item, .certification-item, .experience-item {
+    margin-bottom: 1.5em;
+}
+
+.education-item h3, .experience-item h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+}
+
+.certification-item p:first-child {
+    font-weight: bold;
+}
+
+/* Skills */
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+#skills li {
+    background-color: #FF4B91;
+    color: #1A2634;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background-color: #E6E6FA;
+    color: #1A2634;
+    text-align: center;
+    padding: 1em;
+    border-top: 1px solid #1A2634;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+footer a {
+    color: #FF4B91;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(255, 104, 150);
+}
+
+/* Mobile Layout */
+@media screen and (max-width: 768px) {
+    .page-wrapper {
+        width: 90%;
+        margin: 120px auto 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0.5em 0;
+    }
+
+    #presentation, .education-item, .certification-item, .experience-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Print Layout */
+@media print {
+    body {
+        font-family: Times, serif;
+        background-color: #fff;
+        color: #000;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .page-wrapper {
+        margin: 0;
+        width: 100%;
+    }
+
+    #presentation, #education, #certifications, #experience, #skills, footer {
+        background-color: transparent;
+        border: none;
+    }
+
+    footer {
+        color: #000;
+    }
+}
